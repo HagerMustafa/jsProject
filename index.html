@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header space" id="header ">
+      <nav class="nav container" id="nav">
+        <h3 class="tertiary-heading">HANDTIME</h3>
+        <div class="nav-bar">
+          <ul>
+            <li>
+              <a href="./index.html" id="selected">Home</a>
+            </li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping" id="cart"></i>
+          <div id="cart-content" class=""><ul></ul></div>
+          <p class="cart-components"></p>
+        </div>
+      </nav>
+      <div class="slider">
+        <div class="slide1 container" id="1">
+          <h1 class="primary-heading">STYLISH Watches, Clothes and Shoes</h1>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            reiciendis dolorum eligendi porro iste explicabo, eos nihil et sunt
+            repellat
+          </p>
+          <button class="green-button">
+            <a href="./contact.html">Contact</a>
+          </button>
+          <button class="purple-button">
+            <a href="./about.html">About Us</a>
+          </button>
+        </div>
+        <div class="move-buttons">
+          <div class="left" onclick="leftDirection()">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="right" onclick="rightDirection()">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+        <div class="slide2 remove container" id="2">
+          <h1 class="primary-heading">
+            50% discount when order the first order
+          </h1>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            reiciendis dolorum eligendi porro iste explicabo, eos nihil et sunt
+            repellat
+          </p>
+          <button class="green-button">
+            <a href="./contact.html">Contact</a>
+          </button>
+          <button class="purple-button">
+            <a href="./about.html">About Us</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- <section class="info container space">
+      <h4 class="fourth-heading">Information about our Store</h4>
+      <p class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, ex quis
+        hic maxime vel perferendis ab doloremque animi! Repellendus, autem illo
+        inventore minima sed nam voluptatem itaque officiis necessitatibus
+        expedita.
+      </p>
+    </section> -->
+    <section class="product-sec container space" id="productss">
+      <h4 class="fourth-heading2">Our products</h4>
+
+      <div class="filter-sec">
+        <select name="filter" id="filter" class="filter" onchange="select()">
+          <option value="all">All</option>
+          <option value="clothes">Clothes</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Bags">Bags</option>
+          <option value="watches">Watches</option>
+        </select>
+      </div>
+      <div class="cards" id="cards">
+        <div class="clothes" id="clothes">
+          <div class="product card" id="p1">
+            <img
+              class="product-img"
+              src="./images/dress-shirt-img.png"
+              alt=""
+            />
+            <div class="product-info">
+              <div class="product-title">Man shirt</div>
+              <div class="price">20$</div>
+            </div>
+            <button class="addBtn btn purple-button" onclick="reloadCard()">
+              Add
+            </button>
+          </div>
+          <div class="product card" id="p2">
+            <img
+              class="product-img"
+              src="./images/women-clothes-img.png"
+              alt=""
+            />
+            <div class="product-info">
+              <div class="product-title">Dress</div>
+              <div class="price">30$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+          <div class="product card" id="p3">
+            <img class="product-img" src="./images/tshirt-img.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">T-shirt</div>
+              <div class="price">12$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+        </div>
+        <div class="Electronics" id="Electronics">
+          <div class="product card" id="p4">
+            <img class="product-img" src="./images/laptop-img.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Laptop</div>
+              <div class="price">600$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+          <div class="product card" id="p5">
+            <img class="product-img" src="./images/computer-img.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Pc</div>
+              <div class="price">600$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+        </div>
+        <div class="Bags" id="Bags">
+          <div class="product card" id="p6">
+            <img class="product-img" src="./images/p8.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Bag1</div>
+              <div class="price">12$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+          <div class="product card" id="p7">
+            <img class="product-img" src="./images/p9.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Bag2</div>
+              <div class="price">12$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+        </div>
+        <div class="watches" id="watches">
+          <div class="product card" id="p7">
+            <img class="product-img" src="./images/w1.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Whatch1</div>
+              <div class="price">120$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+          <div class="product card" id="p8">
+            <img class="product-img" src="./images/w7.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Whatch2</div>
+              <div class="price">270$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+          <div class="product card" id="p9">
+            <img class="product-img" src="./images/w6.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Whatch3</div>
+              <div class="price">160$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+          <div class="product card" id="p10">
+            <img class="product-img" src="./images/w3.png" alt="" />
+            <div class="product-info">
+              <div class="product-title">Whatch4</div>
+              <div class="price">180$</div>
+            </div>
+            <button class="addBtn btn purple-button">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="scrollBtn" id="scrollBtn">
+      <button class="scroll" id="scroll" onclick="topFunction()">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+    <footer class="footer">
+      <div class="footer-sec container">
+        <p class="fourth-heading2">HANDTIME</p>
+        <hr class="line" />
+        <div class="grid">
+          <div class="about-shop">
+            <h4 class="fourth-heading">About Shop</h4>
+            <div class="adress">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="text white">Cairo, Egypt</p>
+            </div>
+            <div class="phone">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <p class="text white">+201234567899</p>
+            </div>
+            <div class="email">
+              <i class="fa-regular fa-envelope"></i>
+              <p class="text white">HandTimeShop@gmail.com</p>
+            </div>
+          </div>
+          <div class="shop-description">
+            <p class="text white">
+              Our online Shop is your best choice if you want good quality
+              products, fast Shipping, and the best prices
+            </p>
+          </div>
+          <div class="links">
+            <h4 class="fourth-heading">About Our Store</h4>
+            <div class="linkss">
+              <a href="#">Home</a>
+              <a href="#">products</a>
+              <a href="#">About us</a>
+              <a href="#">Contact With us</a>
+            </div>
+          </div>
+          <div class="social-media">
+            <h4 class="fourth-heading">Follow Us for more</h4>
+            <div class="icons">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- <li class="flex">
+  <img src="" class="cart-img" />
+  <div class="itemName"></div>
+  <div class="pricee"></div>
+</li> -->
